@@ -1,5 +1,13 @@
+:root {
+  --dark-theme-bg-color: #18181B;
+  --dark-theme-primary-color: #E4E4E7;
+  --accent-color: #FACC15;
+  --light-theme-bg-color: #E4E4E7;
+  --light-theme-primary-color: #181818;
+}
 html {
   box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
 }
 
 *, *::after, *::before {
@@ -8,3 +16,89 @@ html {
   box-sizing: inherit;
 }
 
+main {
+  min-height: 100vh;
+}
+
+main.light {
+  color: var(--light-theme-primary-color);
+  background-color: var(--light-theme-bg-color);
+}
+
+main.dark {
+  color: var(--dark-theme-primary-color);
+  background-color: var(--dark-theme-bg-color);
+}
+
+section.empty-notes {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-notes--head {
+  margin: 1rem auto 2rem;
+  font-size: 2.25rem;
+}
+
+.color-accent {
+  background-color: var(--accent-color);
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0.25rem 0.25rem 0.15rem rgba(0,0,0,0.5);
+}
+
+main.light .btn-primary {
+  background: var(--light-theme-primary-color);
+  color: var(--accent-color);
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
+  word-spacing: 0.25rem;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transform: all 0.3s ease;
+  -moz-transform: all 0.3s ease;
+  -ms-transform: all 0.3s ease;
+  -o-transform: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+
+.empty-notes--new-note .btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.empty-notes--new-note {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.new-note--text {
+  font-size: 1.25rem;
+}
