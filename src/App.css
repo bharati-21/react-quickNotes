@@ -283,6 +283,10 @@ main.light .editor-header {
   display: none;
 }
 
+.delete-icon:hover {
+  color: #18181B;
+}
+
 .note:hover > .delete-icon  {
   display: block !important;
 }
