@@ -20,7 +20,7 @@ A notes application created using ReactJS that lets you create, edit, and delete
 - The editor displays the note content, and when a quickNote from the sidebar is selected, it's content is filled in the title and body section.
 
 
-[Image of the application](https://github.com/bharati-21/react-quickNotes/blob/master/react-quickNotes.PNG)
+![Image of the application](https://github.com/bharati-21/react-quickNotes/blob/master/react-quickNotes.PNG)
 
 ## My Learnings
 - One of the important learnings was understanding `lifting the state` to the nearest ancestor of components that share common state.
