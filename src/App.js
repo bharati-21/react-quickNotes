@@ -1,12 +1,12 @@
 import './App.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { nanoid } from 'nanoid';
 import Editor from './components/Editor';
 import Sidebar from './components/Sidebar';
 import Split from 'react-split';
 import WbSunnyIcon  from '@mui/icons-material/WbSunny';
 import NightlightIcon from '@mui/icons-material/Nightlight';
-import { act } from 'react-dom/cjs/react-dom-test-utils.production.min';
+import axios from 'axios';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -15,6 +15,15 @@ function App() {
   );
   const [theme, setTheme] = useState(false);
 
+  useEffect(() => {
+    setNotes(JSON.parse(localStorage.getItem('notes')) || []);
+  }, []);
+
+
+  useEffect(() => {
+   localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes])
+  
 
   function createNewNote() {
     const newNote = {
@@ -24,7 +33,6 @@ function App() {
     }
     setNotes(prevNotes => [newNote, ...prevNotes]);
     setActiveNote(newNote.id)
-    
   }
 
   function toggleActiveNote(event, id) {
