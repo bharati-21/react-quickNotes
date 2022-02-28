@@ -102,10 +102,6 @@ main.dark .color-accent {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  -webkit-transform: all 0.3s ease;
-  -moz-transform: all 0.3s ease;
-  -ms-transform: all 0.3s ease;
-  -o-transform: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -185,10 +181,7 @@ main.light .active-note {
   position: relative;
   height: 100vh;
   min-width: 25%;
-  /* min-width: max-content; */
-  /* max-width: 30%; */
   flex: 2.5;
-  /* flex-grow: 0;  */
 }
 
 .sidebar-header {
@@ -342,6 +335,37 @@ main.light .editor-main .note-head {
 
 .editor-main .note-body {
   word-break: break-all;
+}
+
+.footer {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+
+.footer a, .footer li a, .footer li a:visited {
+  color: inherit;
+}
+
+.footer ul.social-icons {
+  list-style: none; 
+  display: flex; gap: 1rem;
+}
+
+main.dark .footer {
+  border-top: 2px solid var(--highlight-color);
+}
+
+main.light .footer {
+  border-top: 2px solid var(--dark-theme-bg-color);
+}
+
+.footer a:hover, .footer li a:hover {
+  color: var(--accent-color);
 }
 
 @media screen and (max-width: 768px) {

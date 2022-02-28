@@ -6,7 +6,10 @@ import Sidebar from './components/Sidebar';
 import Split from 'react-split';
 import WbSunnyIcon  from '@mui/icons-material/WbSunny';
 import NightlightIcon from '@mui/icons-material/Nightlight';
-import axios from 'axios';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LogoDevIcon from '@mui/icons-material/LogoDev';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -136,6 +139,34 @@ function App() {
           </div>
         </section>
       }
+      <footer className="footer">
+        <p>
+          &lt;/&gt; by <a href="https://bharati-21.github.io/" target="_blank">Bharati</a>
+          </p>
+
+          <ul className="social-icons">
+            <li>
+              <a href="https://github.com/bharati-21" target="_blank">
+                <GitHubIcon  />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/bharati-subramanian-29734b152/" target="_blank">
+                <LinkedInIcon />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/_girlwhocodes" target="_blank">
+                <TwitterIcon />
+              </a>
+            </li>
+            <li>
+              <a href="https://dev.to/bharati21" target="_blank">
+                <LogoDevIcon />
+              </a>
+            </li>
+          </ul>
+      </footer>
     </main>
   );
 }
